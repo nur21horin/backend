@@ -7,3 +7,8 @@ sqlalchemy
 psycopg[binary]
 alembic
 pydantic
+cd /d D:\AEROVISION\BACKEND
+
+.venv\Scripts\activate
+
+pip freeze > requirements.txt
