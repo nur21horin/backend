@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes.flights import router as flight_router
+from app.api.flights.live.live import router as live_flight_router
 
 
 app = FastAPI(
@@ -23,6 +24,7 @@ app.add_middleware(
 )
 
 app.include_router(flight_router)
+app.include_router(live_flight_router)
 
 
 @app.get("/")
